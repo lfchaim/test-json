@@ -1,4 +1,4 @@
-package com.whs.testjson;
+package com.whs.testjson.model;
 
 public class Address {
 
