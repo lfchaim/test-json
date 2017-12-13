@@ -1,4 +1,4 @@
-package com.whs.testjson;
+package com.whs.testjson.model;
 
 import java.util.ArrayList;
 import java.util.Date;

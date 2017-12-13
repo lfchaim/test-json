@@ -1,4 +1,4 @@
-package com.whs.testjson;
+package com.whs.testjson.main;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
+import com.whs.testjson.model.Address;
+import com.whs.testjson.model.Customer;
 
 /**
  * Hello world!
