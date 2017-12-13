@@ -1,6 +1,7 @@
 package com.whs.testjson;
 
 import com.google.gson.Gson;
+import com.whs.testjson.model.Customer;
 
 public class TestGson2 {
 
