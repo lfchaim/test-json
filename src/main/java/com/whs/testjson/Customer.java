@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Customer {
 
 	private Integer code;
@@ -12,6 +14,15 @@ public class Customer {
 	private Boolean active;
 	private Date createDate;
 	private List<Address> listAddress;
+	@SerializedName("default")
+	private boolean _default;
+	
+	public boolean isDefault() {
+		return _default;
+	}
+	public void setDefault(boolean _default) {
+		this._default = _default;
+	}
 	public Integer getCode() {
 		return code;
 	}
