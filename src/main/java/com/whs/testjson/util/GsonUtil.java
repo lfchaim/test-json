@@ -40,4 +40,9 @@ public class GsonUtil {
 	public static boolean isList( String json ){
 		return json.trim().startsWith("[");
 	}
+	
+	public static String toJson(Object obj) {
+		Gson gson = new Gson();
+		return gson.toJson(obj);
+	}
 }
