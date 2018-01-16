@@ -82,13 +82,14 @@ public class MapUtil {
 	        } else if (value instanceof List) {
 	        	List<LinkedHashMap<String, Object>> list = (List<LinkedHashMap<String, Object>>)value;
 	        	for( int i = 0; i < list.size(); i++ ) {
-	        		if( list.get(i) instanceof Map )
+	        		if( list.get(i) instanceof Map ) {
 	        			loadHeader(list.get(i), listHeader, level++, parentName+"/"+key);
-	        		else
-	        			System.out.println(key + "::" + value + "::" +level);
+	        		} else {
+	        			// System.out.println(key + "::" + value + "::" +level);
+	        		}
 	        	}
 	        } else {
-	             System.out.println(key + "::" + value + "::" +level);
+	            // System.out.println(key + "::" + value + "::" +level);
 	        }
 	    }
 	}
