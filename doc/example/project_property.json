@@ -1,0 +1,446 @@
+{
+    "id": "describe a bigserial value",
+    "id_source": "describe a int8 value",
+    "name": "describe a varchar value",
+    "condominium_name": "describe a varchar value",
+    "condominium_value": "describe a numeric value",
+    "num_blocks": "describe a int4 value",
+    "edifice_name": "describe a varchar value",
+    "num_units": "describe a int4 value",
+    "percent_sold": "describe a numeric value",
+    "land_area": "describe a numeric value",
+    "id_notary_office": "describe a int4 value (Reference: notary_office.id)",
+    "id_project_phase": "describe a int4 value (Reference: project_phase.id)",
+    "id_value_zone": "describe a int4 value (Reference: value_zone.id)",
+    "date_created": "describe a timestamp value",
+    "date_updated": "describe a timestamp value",
+    "date_launch_expected": "describe a timestamp value",
+    "id_zone": "describe a int4 value",
+    "launch_month": "describe a int4 value",
+    "launch_year": "describe a int4 value",
+    "ind_vgv_brl": "describe a numeric value",
+    "ind_vgv_usd": "describe a numeric value",
+    "use_category": "describe a varchar value",
+    "date_delivery": "describe a varchar value",
+    "area_total": "describe a numeric value",
+    "pavement_quantity": "describe a int4 value",
+    "pavement_unity": "describe a int4 value",
+    "ind_cub": "describe a numeric value",
+    "ind_cub_h82n": "describe a numeric value",
+    "ind_cub_igpm": "describe a numeric value",
+    "ind_incc": "describe a numeric value",
+    "ind_tax": "describe a numeric value",
+    "ind_usd": "describe a numeric value",
+    "comment_building": "describe a text value",
+    "proj_sector": "describe a int4 value",
+    "proj_block": "describe a int4 value",
+    "date_occupancy": "describe a timestamp value",
+    "date_proj_approved": "describe a timestamp value",
+    "num_elevator": "describe a int4 value",
+    "incorp_registry": "describe a varchar value",
+    "latitude": "describe a numeric value",
+    "longitude": "describe a numeric value",
+    "logo": "describe a varchar value",
+    "photo": "describe a varchar value",
+    "viewable": "describe a int2 value",
+    "location": "describe a point value",
+    "notary_office": {
+      "id": "describe a serial value",
+      "name": "describe a varchar value",
+      "legal_name": "describe a varchar value",
+      "id_address": "describe a int4 value",
+      "complement": "describe a varchar value",
+      "phone1": "describe a varchar value",
+      "phone2": "describe a varchar value",
+      "fax": "describe a varchar value",
+      "email": "describe a varchar value",
+      "site": "describe a varchar value",
+      "comment": "describe a varchar value",
+      "date_created": "describe a timestamp value",
+      "date_updated": "describe a timestamp value"
+    },
+    "project_phase": {
+      "id": "describe a serial value",
+      "name": "describe a varchar value",
+      "ref_code": "describe a bpchar value"
+    },
+    "value_zone": {
+      "id": "describe a serial value",
+      "name": "describe a varchar value",
+      "rh_phis": "describe a numeric value",
+      "rv_phis": "describe a numeric value",
+      "rh_stats": "describe a numeric value",
+      "rv_stats": "describe a numeric value",
+      "phis_land": "describe a numeric value",
+      "stats_land": "describe a numeric value"
+    },
+    "project_address": {
+      "id_project": "describe a int8 value (Reference: project_property.id)",
+      "id_address": "describe a int4 value (Reference: address.id)",
+      "complement": "describe a varchar value",
+      "created": "describe a timestamp value",
+      "address": {
+        "id": "describe a serial value",
+        "street": "describe a varchar value",
+        "number": "describe a varchar value",
+        "city": "describe a varchar value",
+        "district": "describe a varchar value",
+        "neighborhood": "describe a varchar value",
+        "state": "describe a varchar value",
+        "zip_code": "describe a varchar value",
+        "latitude": "describe a numeric value",
+        "longitude": "describe a numeric value",
+        "id_neighborhood": "describe a int4 value",
+        "location": "describe a point value",
+        "id_city": "describe a int4 value",
+        "created": "describe a timestamp value"
+      }
+    },
+    "project_bank": {
+      "id_project": "describe a int8 value (Reference: project_property.id)",
+      "id_bank": "describe a int4 value (Reference: bank.id)",
+      "nu_sequence": "describe a int2 value",
+      "bank": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value",
+        "logo": "describe a varchar value"
+      }
+    },
+    "project_builder": {
+      "id_project": "describe a int4 value (Reference: project_property.id)",
+      "id_builder": "describe a int4 value (Reference: builder.id)",
+      "date_ini": "describe a timestamp value",
+      "date_end": "describe a timestamp value",
+      "nu_sequence": "describe a int2 value",
+      "builder": {
+        "id": "describe a serial value",
+        "id_parent": "describe a int4 value",
+        "name": "describe a varchar value",
+        "id_address": "describe a int4 value",
+        "complement": "describe a varchar value",
+        "path_logo": "describe a varchar value",
+        "email": "describe a varchar value",
+        "site": "describe a varchar value",
+        "phone": "describe a varchar value",
+        "whatsapp": "describe a varchar value"
+      }
+    },
+    "project_developer": {
+      "id_project": "describe a int4 value (Reference: project_property.id)",
+      "id_developer": "describe a int4 value (Reference: developer.id)",
+      "date_ini": "describe a timestamp value",
+      "date_end": "describe a timestamp value",
+      "nu_sequence": "describe a int2 value",
+      "developer": {
+        "id": "describe a serial value",
+        "id_parent": "describe a int4 value",
+        "name": "describe a varchar value",
+        "id_address": "describe a int4 value",
+        "complement": "describe a varchar value",
+        "nickname": "describe a varchar value",
+        "path_logo": "describe a varchar value"
+      }
+    },
+    "project_feature": {
+      "id_project": "describe a int4 value (Reference: project_property.id)",
+      "id_attribute": "describe a int4 value (Reference: project_attribute.id)",
+      "quantity": "describe a int4 value",
+      "value": "describe a varchar value",
+      "project_attribute": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value"
+      }
+    },
+    "project_real_estate": {
+      "id_project": "describe a int4 value (Reference: project_property.id)",
+      "id_real_estate": "describe a int4 value (Reference: real_estate.id)",
+      "date_ini": "describe a timestamp value",
+      "date_end": "describe a timestamp value",
+      "nu_sequence": "describe a int2 value",
+      "real_estate": {
+        "id": "describe a serial value",
+        "id_parent": "describe a int4 value",
+        "name": "describe a varchar value",
+        "id_address": "describe a int4 value",
+        "complement": "describe a varchar value",
+        "path_logo": "describe a varchar value"
+      }
+    },
+    "property": {
+      "id": "serial (do not send it in POST)",
+      "id_source": "describe a int4 value",
+      "name": "describe a varchar value",
+      "id_property_type": "describe a int4 value (Reference: property_type.id)",
+      "id_project": "describe a int4 value (Reference: project_property.id)",
+      "id_building_type": "describe a int4 value (Reference: building_type.id)",
+      "id_financing": "describe a int4 value (Reference: financing.id)",
+      "id_launch_pattern": "describe a int4 value (Reference: launch_pattern.id)",
+      "id_income_class": "describe a int4 value (Reference: income_class.id)",
+      "ind_vgv_brl": "describe a numeric value",
+      "ind_vgv_usd": "describe a numeric value",
+      "quantity_type": "describe a int4 value",
+      "bedroom": "describe a int4 value",
+      "suite": "describe a int4 value",
+      "bathroom": "describe a int4 value",
+      "top_kitchen": "describe a int4 value",
+      "garage": "describe a int4 value",
+      "area_util": "describe a numeric value",
+      "area_common": "describe a numeric value",
+      "area_total": "describe a numeric value",
+      "garage_covered": "describe a int4 value",
+      "garage_uncovered": "describe a int4 value",
+      "unity_incc_di": "describe a numeric value",
+      "area_util_incc_di": "describe a numeric value",
+      "area_service": "describe a numeric value",
+      "area_util_cub": "describe a numeric value",
+      "area_util_igpm": "describe a numeric value",
+      "comment_values": "describe a varchar value",
+      "quantity_type_sold": "describe a int4 value",
+      "building_type": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value",
+        "abbreviation": "describe a varchar value",
+        "differentiated": "describe a bool value"
+      },
+      "financing": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value",
+        "name_en": "describe a varchar value"
+      },
+      "income_class": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value",
+        "name_detail": "describe a varchar value",
+        "interval": "describe a varchar value",
+        "interval_min": "describe a numeric value",
+        "interval_max": "describe a numeric value",
+        "year_min": "describe a int4 value",
+        "year_max": "describe a int4 value"
+      },
+      "launch_pattern": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value",
+        "name_en": "describe a varchar value"
+      },
+      "property_type": {
+        "id": "describe a serial value",
+        "name": "describe a varchar value"
+      },
+      "property_address": {
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "id_address": "describe a int4 value (Reference: address.id)",
+        "complement": "describe a varchar value",
+        "created": "describe a timestamp value",
+        "address": {
+          "id": "describe a serial value",
+          "street": "describe a varchar value",
+          "number": "describe a varchar value",
+          "city": "describe a varchar value",
+          "district": "describe a varchar value",
+          "neighborhood": "describe a varchar value",
+          "state": "describe a varchar value",
+          "zip_code": "describe a varchar value",
+          "latitude": "describe a numeric value",
+          "longitude": "describe a numeric value",
+          "id_neighborhood": "describe a int4 value",
+          "location": "describe a point value",
+          "id_city": "describe a int4 value",
+          "created": "describe a timestamp value"
+        }
+      },
+      "property_builder": {
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "id_builder": "describe a int4 value (Reference: builder.id)",
+        "date_ini": "describe a timestamp value",
+        "date_end": "describe a timestamp value",
+        "builder": {
+          "id": "describe a serial value",
+          "id_parent": "describe a int4 value",
+          "name": "describe a varchar value",
+          "id_address": "describe a int4 value",
+          "complement": "describe a varchar value",
+          "path_logo": "describe a varchar value",
+          "email": "describe a varchar value",
+          "site": "describe a varchar value",
+          "phone": "describe a varchar value",
+          "whatsapp": "describe a varchar value"
+        }
+      },
+      "property_developer": {
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "id_developer": "describe a int4 value (Reference: developer.id)",
+        "date_ini": "describe a timestamp value",
+        "date_end": "describe a timestamp value",
+        "developer": {
+          "id": "describe a serial value",
+          "id_parent": "describe a int4 value",
+          "name": "describe a varchar value",
+          "id_address": "describe a int4 value",
+          "complement": "describe a varchar value",
+          "nickname": "describe a varchar value",
+          "path_logo": "describe a varchar value"
+        }
+      },
+      "property_feature": {
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "id_attribute": "describe a int4 value (Reference: property_attribute.id)",
+        "quantity": "describe a int4 value",
+        "value": "describe a varchar value",
+        "property_attribute": {
+          "id": "describe a serial value",
+          "name": "describe a varchar value"
+        }
+      },
+      "property_for_sale": {
+        "id": "serial (do not send it in POST)",
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "quantity": "describe a int4 value",
+        "value": "describe a numeric value",
+        "id_sales_channel": "describe a int4 value (Reference: sales_channel.id)",
+        "sales_channel": {
+          "id": "describe a serial value",
+          "name": "describe a varchar value"
+        },
+        "property_sold": {
+          "id": "serial (do not send it in POST)",
+          "id_property_for_sale": "describe a int4 value (Reference: property_for_sale.id)",
+          "value_updated": "describe a numeric value",
+          "quantity_sold": "describe a int4 value",
+          "date_updated": "describe a timestamp value",
+          "source_name": "describe a varchar value",
+          "source_phone": "describe a varchar value",
+          "source_comment": "describe a varchar value",
+          "code_user": "describe a int4 value",
+          "id_property": "describe a int4 value (Reference: property.id)",
+          "history": "describe a int2 value",
+          "is_valid": "describe a bool value",
+          "property": {
+            "id": "describe a serial value",
+            "id_source": "describe a int4 value",
+            "name": "describe a varchar value",
+            "id_property_type": "describe a int4 value",
+            "id_project": "describe a int4 value",
+            "id_building_type": "describe a int4 value",
+            "id_financing": "describe a int4 value",
+            "id_launch_pattern": "describe a int4 value",
+            "id_income_class": "describe a int4 value",
+            "ind_vgv_brl": "describe a numeric value",
+            "ind_vgv_usd": "describe a numeric value",
+            "quantity_type": "describe a int4 value",
+            "bedroom": "describe a int4 value",
+            "suite": "describe a int4 value",
+            "bathroom": "describe a int4 value",
+            "top_kitchen": "describe a int4 value",
+            "garage": "describe a int4 value",
+            "area_util": "describe a numeric value",
+            "area_common": "describe a numeric value",
+            "area_total": "describe a numeric value",
+            "garage_covered": "describe a int4 value",
+            "garage_uncovered": "describe a int4 value",
+            "unity_incc_di": "describe a numeric value",
+            "area_util_incc_di": "describe a numeric value",
+            "area_service": "describe a numeric value",
+            "area_util_cub": "describe a numeric value",
+            "area_util_igpm": "describe a numeric value",
+            "comment_values": "describe a varchar value",
+            "quantity_type_sold": "describe a int4 value"
+          },
+          "property_sold_real_estate": {
+            "id_property_sold": "describe a int4 value (Reference: property_sold.id)",
+            "id_real_estate": "describe a int4 value (Reference: real_estate.id)",
+            "nu_sequence": "describe a int2 value",
+            "real_estate": {
+              "id": "describe a serial value",
+              "id_parent": "describe a int4 value",
+              "name": "describe a varchar value",
+              "id_address": "describe a int4 value",
+              "complement": "describe a varchar value",
+              "path_logo": "describe a varchar value"
+            }
+          }
+        }
+      },
+      "property_group_building": {
+        "id": "serial (do not send it in POST)",
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "area": "describe a numeric value",
+        "quantity": "describe a int4 value",
+        "area_value": "describe a numeric value",
+        "area_common": "describe a numeric value",
+        "area_total": "describe a numeric value"
+      },
+      "property_meta": {
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "quantity": "describe a int4 value",
+        "unity": "describe a varchar value",
+        "bedroom": "describe a int4 value",
+        "suite": "describe a int4 value",
+        "bathroom": "describe a int4 value",
+        "eating_area": "describe a int4 value",
+        "garage": "describe a int4 value",
+        "usd": "describe a numeric value",
+        "util_area": "describe a numeric value",
+        "common_area": "describe a numeric value",
+        "total_area": "describe a numeric value",
+        "value_unit": "describe a numeric value",
+        "vgv": "describe a numeric value",
+        "perc_quarto": "describe a numeric value",
+        "unity_inccdi": "describe a numeric value",
+        "util_area_inccdi": "describe a numeric value",
+        "val_total_area_inccdi": "describe a numeric value",
+        "unit_igpm": "describe a numeric value",
+        "util_area_igpm": "describe a numeric value",
+        "val_total_area_igpm": "describe a numeric value",
+        "unity_cub": "describe a numeric value",
+        "val_total_area_cub": "describe a numeric value"
+      },
+      "property_real_estate": {
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "id_real_estate": "describe a int4 value (Reference: real_estate.id)",
+        "date_ini": "describe a timestamp value",
+        "date_end": "describe a timestamp value",
+        "real_estate": {
+          "id": "describe a serial value",
+          "id_parent": "describe a int4 value",
+          "name": "describe a varchar value",
+          "id_address": "describe a int4 value",
+          "complement": "describe a varchar value",
+          "path_logo": "describe a varchar value"
+        }
+      },
+      "property_sold": {
+        "id": "serial (do not send it in POST)",
+        "id_property_for_sale": "describe a int4 value (Reference: property_for_sale.id)",
+        "value_updated": "describe a numeric value",
+        "quantity_sold": "describe a int4 value",
+        "date_updated": "describe a timestamp value",
+        "source_name": "describe a varchar value",
+        "source_phone": "describe a varchar value",
+        "source_comment": "describe a varchar value",
+        "code_user": "describe a int4 value",
+        "id_property": "describe a int4 value (Reference: property.id)",
+        "history": "describe a int2 value",
+        "is_valid": "describe a bool value",
+        "property_for_sale": {
+          "id": "describe a serial value",
+          "id_property": "describe a int4 value",
+          "quantity": "describe a int4 value",
+          "value": "describe a numeric value",
+          "id_sales_channel": "describe a int4 value"
+        },
+        "property_sold_real_estate": {
+          "id_property_sold": "describe a int4 value (Reference: property_sold.id)",
+          "id_real_estate": "describe a int4 value (Reference: real_estate.id)",
+          "nu_sequence": "describe a int2 value",
+          "real_estate": {
+            "id": "describe a serial value",
+            "id_parent": "describe a int4 value",
+            "name": "describe a varchar value",
+            "id_address": "describe a int4 value",
+            "complement": "describe a varchar value",
+            "path_logo": "describe a varchar value"
+          }
+        }
+      }
+    }
+  }
